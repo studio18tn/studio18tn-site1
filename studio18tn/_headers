@@ -1,0 +1,22 @@
+/*
+  X-Content-Type-Options: nosniff
+  X-Frame-Options: SAMEORIGIN
+  Referrer-Policy: strict-origin-when-cross-origin
+  Permissions-Policy: geolocation=(), microphone=(), camera=(), interest-cohort=()
+
+/assets/*
+  Cache-Control: public, max-age=604800
+
+/favicon.ico
+  Cache-Control: public, max-age=604800
+/favicon-16x16.png
+  Cache-Control: public, max-age=604800
+/favicon-32x32.png
+  Cache-Control: public, max-age=604800
+/apple-touch-icon.png
+  Cache-Control: public, max-age=604800
+
+/index.html
+  Cache-Control: public, max-age=0, must-revalidate
+/thanks.html
+  Cache-Control: public, max-age=0, must-revalidate

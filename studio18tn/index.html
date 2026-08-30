@@ -1,0 +1,1038 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Studio 18 | Fully Integrated Recording, Video & Private Club — Eagleville, TN</title>
+<meta name="description" content="Studio 18 is a fully integrated recording, video production, podcast, livestream and private event facility 45 minutes from Nashville. SSL Origin console, Neve preamps, 11'x28' LED wall, and a members-only club with golf simulator, Irish pub and cigar lounge.">
+<meta name="google-site-verification" content="Q8BL5zPIEZ1UwjAuDNPi1_j01DKKppzGvFTFpdKDONU">
+<meta property="og:title" content="Studio 18 — Music, Video & Experience">
+<meta property="og:description" content="A fully integrated production facility and private members club 45 minutes from Nashville.">
+<meta property="og:type" content="website">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="canonical" href="https://studio18tn.net/">
+<meta property="og:url" content="https://studio18tn.net/">
+<meta property="og:site_name" content="Studio 18">
+<meta property="og:image" content="https://studio18tn.net/assets/og-image.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="Studio 18 control room looking into the live room, Eagleville TN">
+<meta name="twitter:image" content="https://studio18tn.net/assets/og-image.jpg">
+<meta name="twitter:title" content="Studio 18 — Music, Video &amp; Experience">
+<meta name="twitter:description" content="A fully integrated production facility and private members club 45 minutes from Nashville.">
+<meta name="theme-color" content="#0a0b0c">
+<link rel="icon" href="/favicon.ico" sizes="any">
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+<link rel="apple-touch-icon" href="/apple-touch-icon.png">
+<link rel="manifest" href="/site.webmanifest">
+<link rel="preload" as="image" href="assets/control-room-hero.webp" type="image/webp" fetchpriority="high">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "LocalBusiness",
+  "name": "Studio 18",
+  "@id": "https://studio18tn.net/#studio18",
+  "url": "https://studio18tn.net/",
+  "image": [
+    "https://studio18tn.net/assets/og-image.jpg",
+    "https://studio18tn.net/assets/control-room-hero.jpg",
+    "https://studio18tn.net/assets/live-room-led-wall.jpg"
+  ],
+  "priceRange": "$$",
+  "geo": { "@type": "GeoCoordinates", "latitude": 35.7523, "longitude": -86.6511 },
+  "areaServed": [ "Nashville", "Murfreesboro", "Franklin", "Middle Tennessee" ],
+  "sameAs": [
+    "https://maps.google.com/?cid=13551956863689888202",
+    "https://www.instagram.com/studio18tn/",
+    "https://www.tiktok.com/@studio18tn"
+  ],
+  "hasMap": "https://maps.google.com/?cid=13551956863689888202",
+  "telephone": "629-899-2611",
+  "email": "studio18.avl@gmail.com",
+  "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "15430 Highway 99",
+    "addressLocality": "Eagleville",
+    "addressRegion": "TN",
+    "postalCode": "37060",
+    "addressCountry": "US"
+  },
+  "description": "Fully integrated recording, video production and private event facility with a members-only club, 45-60 minutes from Nashville."
+}
+</script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,400;0,500;0,600;0,700;0,800;0,900;1,500&family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,500;0,9..144,600;1,9..144,500&family=IBM+Plex+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+picture{display:contents}
+footer .foot-brand img{width:auto;}
+
+/* ============================================================
+   STUDIO 18 — DESIGN TOKENS
+   Two brand worlds sharing one shell: STUDIO (broadcast/technical)
+   and CLUB (members lounge/cigar bar). A morph transition on the
+   mode toggle is the site's signature interaction.
+   ============================================================ */
+:root{
+  /* shared */
+  --font-display: 'Montserrat', sans-serif;
+  --font-serif: 'Fraunces', serif;
+  --font-mono: 'IBM Plex Mono', monospace;
+  --radius: 2px;
+
+  /* STUDIO mode palette */
+  --s-bg: #0a0b0c;
+  --s-bg2: #131517;
+  --s-panel: #17191c;
+  --s-line: #2a2d31;
+  --s-text: #f1f1ec;
+  --s-muted: #8b9298;
+  --s-green: #54B953;
+  --s-green-dim: #2f6b30;
+  --s-blue: #4fc8e0;
+  --s-red: #e05555;
+
+  /* CLUB mode palette */
+  --c-bg: #0f1a13;
+  --c-bg2: #16241a;
+  --c-panel: #1a2a1e;
+  --c-line: #3a4a30;
+  --c-text: #f3ead4;
+  --c-muted: #b7ab8d;
+  --c-brass: #c9a227;
+  --c-brass-dim: #8a6d1c;
+  --c-ember: #b8672e;
+
+  /* active (JS toggles these via body class) */
+  --bg: var(--s-bg);
+  --bg2: var(--s-bg2);
+  --panel: var(--s-panel);
+  --line: var(--s-line);
+  --text: var(--s-text);
+  --muted: var(--s-muted);
+  --accent: var(--s-green);
+  --accent-dim: var(--s-green-dim);
+  --accent2: var(--s-blue);
+  --display-font: var(--font-display);
+}
+
+*{margin:0;padding:0;box-sizing:border-box;}
+html{scroll-behavior:smooth;}
+body{
+  background:var(--bg);
+  color:var(--text);
+  font-family:var(--font-display);
+  transition:background 0.7s ease, color 0.7s ease;
+  overflow-x:hidden;
+}
+body.club-mode{
+  --bg: var(--c-bg);
+  --bg2: var(--c-bg2);
+  --panel: var(--c-panel);
+  --line: var(--c-line);
+  --text: var(--c-text);
+  --muted: var(--c-muted);
+  --accent: var(--c-brass);
+  --accent-dim: var(--c-brass-dim);
+  --accent2: var(--c-ember);
+  --display-font: var(--font-serif);
+}
+a{color:inherit;text-decoration:none;}
+img{display:block;max-width:100%;}
+.eyebrow{
+  font-family:var(--font-mono);
+  font-size:11px;
+  letter-spacing:0.22em;
+  text-transform:uppercase;
+  color:var(--accent);
+  display:flex;align-items:center;gap:10px;
+  margin-bottom:14px;
+}
+.eyebrow::before{content:'';width:22px;height:1px;background:var(--accent);display:inline-block;}
+h1,h2,h3{font-family:var(--display-font);transition:font-family 0.4s ease;}
+.section{padding:100px 8vw;position:relative;}
+@media(max-width:768px){.section{padding:64px 6vw;}}
+.section-head{max-width:640px;margin-bottom:56px;}
+.section-head h2{font-size:clamp(28px,4vw,44px);font-weight:800;line-height:1.05;letter-spacing:-0.01em;}
+body.club-mode .section-head h2{font-weight:600;letter-spacing:-0.01em;}
+.section-head p{color:var(--muted);font-size:16px;line-height:1.6;margin-top:16px;max-width:52ch;}
+.btn{
+  display:inline-flex;align-items:center;gap:10px;
+  padding:15px 28px;
+  font-family:var(--font-mono);
+  font-size:12px;letter-spacing:0.12em;text-transform:uppercase;
+  border:1px solid var(--accent);
+  color:var(--accent);
+  background:transparent;
+  cursor:pointer;
+  transition:all 0.25s ease;
+  white-space:nowrap;
+}
+.btn:hover{background:var(--accent);color:var(--bg);}
+.btn.solid{background:var(--accent);color:var(--bg);}
+.btn.solid:hover{opacity:0.85;background:var(--accent);}
+.btn.ghost{border-color:var(--line);color:var(--text);}
+.btn.ghost:hover{border-color:var(--accent);color:var(--accent);background:transparent;}
+
+/* ---------- NAV ---------- */
+header{
+  position:fixed;top:0;left:0;right:0;z-index:1000;
+  display:flex;align-items:center;justify-content:space-between;
+  padding:18px 8vw;
+  background:linear-gradient(to bottom, rgba(0,0,0,0.55), transparent);
+  backdrop-filter:blur(2px);
+  transition:background 0.4s ease;
+}
+header.scrolled{background:var(--bg);border-bottom:1px solid var(--line);}
+.brand{display:flex;align-items:center;gap:12px;}
+.brand img{height:34px;width:auto;}
+.brand span{font-family:var(--font-mono);font-size:12px;letter-spacing:0.18em;color:var(--muted);}
+nav{display:flex;align-items:center;gap:6px;}
+.mode-toggle{
+  display:flex;border:1px solid var(--line);border-radius:999px;padding:3px;gap:2px;
+  font-family:var(--font-mono);font-size:11px;letter-spacing:0.1em;text-transform:uppercase;
+}
+.mode-toggle button{
+  border:none;background:transparent;color:var(--muted);
+  padding:8px 16px;border-radius:999px;cursor:pointer;
+  transition:all 0.3s ease;font-family:inherit;font-size:inherit;letter-spacing:inherit;
+}
+.mode-toggle button.active{background:var(--accent);color:var(--bg);}
+.nav-links{display:flex;gap:26px;margin-left:26px;font-size:13px;letter-spacing:0.02em;}
+.nav-links a{color:var(--muted);transition:color 0.25s;}
+.nav-links a:hover{color:var(--accent);}
+.nav-phone{font-family:var(--font-mono);font-size:13px;color:var(--text);margin-left:26px;}
+@media(max-width:900px){.nav-links,.nav-phone{display:none;}}
+
+/* ---------- HERO ---------- */
+.hero{
+  min-height:100vh;position:relative;display:flex;flex-direction:column;justify-content:flex-end;
+  padding:0 8vw 90px;overflow:hidden;
+}
+.hero-bg{
+  position:absolute;inset:0;z-index:0;
+}
+.hero-bg img{width:100%;height:100%;object-fit:cover;object-position:center 30%;filter:saturate(0.9);}
+.hero-bg::after{
+  content:'';position:absolute;inset:0;
+  background:linear-gradient(to top, var(--bg) 4%, rgba(10,11,12,0.35) 45%, rgba(10,11,12,0.15) 100%);
+}
+body.club-mode .hero-bg::after{background:linear-gradient(to top, var(--c-bg) 4%, rgba(15,26,19,0.4) 45%, rgba(15,26,19,0.2) 100%);}
+.hero-content{position:relative;z-index:1;max-width:920px;}
+.hero-tag{font-family:var(--font-mono);font-size:12px;letter-spacing:0.2em;color:var(--accent);text-transform:uppercase;margin-bottom:22px;display:flex;align-items:center;gap:10px;}
+.hero-dot{width:7px;height:7px;border-radius:50%;background:var(--accent);animation:pulse 2s infinite;}
+@keyframes pulse{0%,100%{opacity:1;}50%{opacity:0.3;}}
+.hero h1{
+  font-size:clamp(46px,8vw,104px);font-weight:900;line-height:0.94;letter-spacing:-0.02em;
+  transition:font-family 0.4s ease, font-weight 0.4s ease;
+}
+body.club-mode .hero h1{font-weight:600;font-style:italic;letter-spacing:-0.01em;}
+.hero-sub{font-size:clamp(16px,2vw,20px);color:var(--text);opacity:0.85;margin-top:22px;max-width:600px;line-height:1.5;font-weight:400;}
+.hero-meta{display:flex;gap:32px;margin-top:38px;flex-wrap:wrap;}
+.hero-meta div{font-family:var(--font-mono);font-size:12px;color:var(--muted);}
+.hero-meta strong{display:block;color:var(--text);font-size:14px;margin-bottom:4px;font-weight:500;}
+.hero-cta{display:flex;gap:14px;margin-top:42px;flex-wrap:wrap;}
+
+/* ---------- SIGNAL RAIL (studio signature) ---------- */
+.signal-rail{
+  position:fixed;right:26px;top:50%;transform:translateY(-50%);z-index:900;
+  display:flex;flex-direction:column;gap:10px;
+  opacity:0;transition:opacity 0.5s ease;
+}
+body.studio-mode .signal-rail{opacity:1;}
+@media(max-width:900px){.signal-rail{display:none;}}
+.signal-rail i{width:3px;height:18px;background:var(--line);display:block;}
+.signal-rail i.on{background:var(--accent);}
+
+/* ---------- PILLARS STRIP ---------- */
+.pillars{display:grid;grid-template-columns:repeat(5,1fr);border-top:1px solid var(--line);border-bottom:1px solid var(--line);}
+@media(max-width:900px){.pillars{grid-template-columns:repeat(2,1fr);}}
+.pillar{padding:34px 22px;border-right:1px solid var(--line);}
+.pillar:last-child{border-right:none;}
+.pillar .num{font-family:var(--font-mono);font-size:11px;color:var(--accent);margin-bottom:10px;}
+.pillar h4{font-size:15px;font-weight:700;margin-bottom:8px;line-height:1.3;}
+.pillar p{font-size:12.5px;color:var(--muted);line-height:1.5;}
+
+/* ---------- GEAR / SPEC SHEET ---------- */
+.gear-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:1px;background:var(--line);border:1px solid var(--line);}
+@media(max-width:768px){.gear-grid{grid-template-columns:1fr;}}
+.gear-card{background:var(--bg);padding:34px;}
+.gear-card h3{font-size:13px;font-family:var(--font-mono);letter-spacing:0.1em;text-transform:uppercase;color:var(--accent);margin-bottom:18px;}
+.gear-card ul{list-style:none;}
+.gear-card li{
+  font-size:14.5px;padding:10px 0;border-bottom:1px dashed var(--line);
+  display:flex;justify-content:space-between;gap:14px;color:var(--text);
+}
+.gear-card li:last-child{border-bottom:none;}
+.gear-card li span.tag{font-family:var(--font-mono);font-size:10.5px;color:var(--muted);white-space:nowrap;}
+.stat-strip{display:grid;grid-template-columns:repeat(4,1fr);margin-top:1px;border:1px solid var(--line);border-top:none;}
+@media(max-width:768px){.stat-strip{grid-template-columns:repeat(2,1fr);}}
+.stat{padding:26px;border-right:1px solid var(--line);text-align:left;}
+.stat:last-child{border-right:none;}
+.stat b{display:block;font-size:26px;font-family:var(--font-mono);color:var(--accent);}
+.stat span{font-size:11.5px;color:var(--muted);text-transform:uppercase;letter-spacing:0.08em;}
+
+/* ---------- SERVICES ---------- */
+.services-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1px;background:var(--line);border:1px solid var(--line);}
+@media(max-width:900px){.services-grid{grid-template-columns:1fr;}}
+.svc-card{background:var(--bg);padding:32px;display:flex;flex-direction:column;min-height:230px;}
+.svc-card .svc-icon{font-family:var(--font-mono);font-size:11px;color:var(--muted);margin-bottom:18px;}
+.svc-card h3{font-size:19px;font-weight:700;margin-bottom:12px;}
+.svc-card p{font-size:13.5px;color:var(--muted);line-height:1.6;flex-grow:1;}
+.svc-card .svc-cta{margin-top:18px;font-family:var(--font-mono);font-size:11px;letter-spacing:0.08em;text-transform:uppercase;color:var(--accent);display:flex;align-items:center;gap:6px;}
+.svc-card.featured{background:var(--panel);}
+.addon-note{
+  margin-top:34px;padding:22px 26px;border:1px dashed var(--line);
+  font-size:13.5px;color:var(--muted);line-height:1.7;
+}
+.addon-note b{color:var(--text);}
+
+/* ---------- GALLERY ---------- */
+.gallery{display:grid;grid-template-columns:1.4fr 1fr 1fr;grid-template-rows:280px 280px;gap:10px;}
+@media(max-width:900px){.gallery{grid-template-columns:1fr 1fr;grid-template-rows:200px 200px 200px;}}
+.gallery figure{position:relative;overflow:hidden;background:var(--panel);}
+.gallery figure:nth-child(1){grid-row:1/3;}
+.gallery img{width:100%;height:100%;object-fit:cover;transition:transform 0.6s ease;}
+.gallery figure:hover img{transform:scale(1.06);}
+.gallery figcaption{
+  position:absolute;bottom:0;left:0;right:0;padding:16px 18px;
+  background:linear-gradient(to top, rgba(0,0,0,0.75), transparent);
+  font-family:var(--font-mono);font-size:11px;letter-spacing:0.05em;color:#fff;
+}
+
+/* ---------- CALENDAR ---------- */
+.cal-wrap{border:1px solid var(--line);background:var(--panel);}
+.cal-legend{display:flex;gap:22px;padding:18px 26px;border-bottom:1px solid var(--line);flex-wrap:wrap;}
+.cal-legend div{display:flex;align-items:center;gap:8px;font-family:var(--font-mono);font-size:11.5px;color:var(--muted);}
+.dot{width:9px;height:9px;border-radius:2px;}
+.dot.open{background:#4caf50;}
+.dot.booked{background:#e05555;}
+.dot.held{background:#e0c04f;}
+.dot.event{background:#4fc8e0;}
+.embed-slot{
+  min-height:520px;display:flex;align-items:center;justify-content:center;flex-direction:column;gap:14px;
+  padding:40px;text-align:center;color:var(--muted);
+}
+.embed-slot .icon{font-family:var(--font-mono);font-size:32px;color:var(--accent);}
+.embed-slot p{font-size:13px;max-width:44ch;line-height:1.6;}
+.embed-slot code{font-family:var(--font-mono);font-size:11px;background:var(--bg);padding:3px 8px;border:1px solid var(--line);}
+.cal-wrap iframe{width:100%;border:none;display:block;min-height:520px;}
+.notion-embed{border:1px solid var(--line);background:var(--panel);overflow:hidden;}
+.notion-embed-bar{
+  display:flex;align-items:center;gap:10px;padding:12px 20px;
+  border-bottom:1px solid var(--line);
+  font-family:var(--font-mono);font-size:10.5px;letter-spacing:0.1em;text-transform:uppercase;color:var(--muted);
+}
+.notion-embed-bar .live-dot{width:6px;height:6px;border-radius:50%;background:var(--accent);animation:pulse 2s infinite;flex-shrink:0;}
+.notion-crop{overflow:hidden;position:relative;}
+.notion-crop iframe{position:absolute;top:-230px;left:0;width:100%;height:calc(100% + 230px);border:none;}
+.notion-invert iframe{filter:invert(0.92) hue-rotate(180deg);}
+
+/* ---------- NATIVE CALENDAR ---------- */
+.month-grids{display:grid;grid-template-columns:1fr 1fr;gap:1px;background:var(--line);border:1px solid var(--line);}
+@media(max-width:768px){.month-grids{grid-template-columns:1fr;}}
+.month-block{background:var(--bg);padding:24px;}
+.month-title{font-family:var(--font-mono);font-size:13px;letter-spacing:0.1em;text-transform:uppercase;color:var(--accent);margin-bottom:16px;}
+.weekday-row{display:grid;grid-template-columns:repeat(7,1fr);gap:4px;margin-bottom:6px;}
+.weekday-row span{font-family:var(--font-mono);font-size:9.5px;text-align:center;color:var(--muted);text-transform:uppercase;}
+.day-grid{display:grid;grid-template-columns:repeat(7,1fr);gap:4px;}
+.day-cell{
+  aspect-ratio:1;display:flex;align-items:center;justify-content:center;
+  font-family:var(--font-mono);font-size:12px;position:relative;
+  border:1px solid var(--line);color:var(--text);
+}
+.day-cell.empty{border:none;}
+.day-cell.status-open{border-color:#4caf50;color:#4caf50;}
+.day-cell.status-booked{background:var(--line);color:var(--muted);border-color:var(--line);}
+.day-cell.status-held{border-color:#e0c04f;color:#e0c04f;}
+.day-cell.status-event{border-color:#4fc8e0;color:#4fc8e0;background:rgba(79,200,224,0.08);}
+.day-cell.status-past{opacity:0.25;}
+.cal-loading{font-family:var(--font-mono);font-size:12px;color:var(--muted);text-align:center;padding:40px;grid-column:1/-1;}
+.cal-error{font-family:var(--font-mono);font-size:12px;color:var(--muted);text-align:center;padding:20px;}
+
+/* ---------- NEWS ---------- */
+.news-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:24px;}
+@media(max-width:900px){.news-grid{grid-template-columns:1fr;}}
+.news-card{border:1px solid var(--line);padding:26px;background:var(--panel);}
+.news-card .cat{font-family:var(--font-mono);font-size:10.5px;color:var(--accent);text-transform:uppercase;letter-spacing:0.1em;margin-bottom:12px;}
+.news-card h4{font-size:17px;font-weight:700;margin-bottom:10px;line-height:1.3;}
+.news-card p{font-size:13.5px;color:var(--muted);line-height:1.6;}
+.news-card .date{font-family:var(--font-mono);font-size:11px;color:var(--muted);margin-top:16px;}
+.news-card.highlight{border-color:var(--accent);}
+
+/* ---------- CLUB SPECIFIC ---------- */
+.club-hero-badge{
+  display:inline-flex;align-items:center;gap:10px;padding:10px 18px;
+  border:1px solid var(--accent);font-family:var(--font-mono);font-size:11px;
+  letter-spacing:0.14em;text-transform:uppercase;color:var(--accent);margin-bottom:24px;
+}
+.amenity-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1px;background:var(--line);border:1px solid var(--line);}
+@media(max-width:900px){.amenity-grid{grid-template-columns:1fr;}}
+.amenity{background:var(--bg);padding:36px 30px;}
+.amenity .ic{font-size:28px;margin-bottom:16px;}
+.amenity h3{font-family:var(--font-serif);font-size:21px;font-weight:600;margin-bottom:12px;}
+.amenity p{font-size:14px;color:var(--muted);line-height:1.65;}
+
+.cigar-feature{
+  display:grid;grid-template-columns:1fr 1fr;gap:60px;align-items:center;
+  border:1px solid var(--accent);padding:50px;background:var(--panel);position:relative;overflow:hidden;
+}
+@media(max-width:900px){.cigar-feature{grid-template-columns:1fr;padding:32px;gap:28px;}}
+.cigar-feature::before{
+  content:'';position:absolute;top:-40%;right:-10%;width:400px;height:400px;
+  background:radial-gradient(circle, rgba(201,162,39,0.14), transparent 70%);pointer-events:none;
+}
+.cigar-feature .coming{font-family:var(--font-mono);font-size:11px;letter-spacing:0.18em;text-transform:uppercase;color:var(--accent);margin-bottom:18px;}
+.cigar-feature h3{font-family:var(--font-serif);font-size:clamp(26px,3vw,38px);font-weight:600;line-height:1.15;margin-bottom:20px;}
+.cigar-feature p{font-size:15px;color:var(--muted);line-height:1.7;margin-bottom:14px;}
+.progress-list{list-style:none;margin-top:24px;}
+.progress-list li{display:flex;align-items:center;gap:12px;font-size:13.5px;padding:8px 0;color:var(--text);}
+.progress-list li .check{width:18px;height:18px;border:1px solid var(--accent);border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:10px;color:var(--accent);flex-shrink:0;}
+
+.membership-panel{
+  border:1px solid var(--line);padding:50px;text-align:center;background:var(--panel);
+  position:relative;
+}
+.membership-panel::before,.membership-panel::after{
+  content:'';position:absolute;width:28px;height:28px;border:1px solid var(--accent);
+}
+.membership-panel::before{top:14px;left:14px;border-right:none;border-bottom:none;}
+.membership-panel::after{bottom:14px;right:14px;border-left:none;border-top:none;}
+.membership-panel h3{font-family:var(--font-serif);font-size:clamp(24px,3vw,34px);font-weight:600;margin-bottom:16px;}
+.membership-panel p{color:var(--muted);font-size:14.5px;max-width:52ch;margin:0 auto 28px;line-height:1.7;}
+
+/* ---------- BRIDGE / EVENTS ---------- */
+.bridge{
+  background:linear-gradient(120deg, #0a0b0c 0%, #14140f 50%, #14180f 100%);
+  border-top:1px solid #333;border-bottom:1px solid #333;
+}
+.bridge .eyebrow{color:var(--c-brass);}
+.bridge .eyebrow::before{background:var(--c-brass);}
+.bridge h2{color:#f1f1ec;}
+.bridge-grid{display:grid;grid-template-columns:1fr 1fr;gap:48px;margin-top:20px;}
+@media(max-width:900px){.bridge-grid{grid-template-columns:1fr;}}
+.bridge-card{border:1px solid #3a3a30;padding:34px;background:rgba(255,255,255,0.02);}
+.bridge-card h4{font-size:18px;font-weight:700;color:#f1f1ec;margin-bottom:12px;}
+.bridge-card p{font-size:14px;color:#a8a89a;line-height:1.7;margin-bottom:18px;}
+
+/* ---------- CLIENT SHOWCASE ---------- */
+.showcase-wrap{border:1px solid var(--line);background:var(--panel);}
+
+/* ---------- VIDEO TOUR (shared) ---------- */
+.tour-section{background:#0a0b0c;border-top:1px solid #2a2d31;border-bottom:1px solid #2a2d31;}
+.tour-grid{display:grid;grid-template-columns:0.9fr 1.1fr;gap:60px;align-items:center;}
+@media(max-width:900px){.tour-grid{grid-template-columns:1fr;gap:32px;}}
+.tour-copy .eyebrow{color:#54B953;}
+.tour-copy .eyebrow::before{background:#54B953;}
+.tour-copy h2{color:#f1f1ec;font-family:'Montserrat',sans-serif;font-weight:800;font-size:clamp(26px,3.4vw,40px);line-height:1.08;margin-bottom:18px;}
+.tour-copy p{color:#a8aba2;font-size:15px;line-height:1.7;max-width:48ch;margin-bottom:14px;}
+.tour-copy .tour-stops{list-style:none;margin-top:22px;}
+.tour-copy .tour-stops li{display:flex;align-items:center;gap:12px;font-size:13.5px;padding:7px 0;color:#e8e8e2;font-family:'IBM Plex Mono',monospace;}
+.tour-copy .tour-stops li::before{content:'';width:16px;height:1px;background:#54B953;display:inline-block;}
+.phone-frame{
+  position:relative;width:100%;max-width:340px;margin:0 auto;
+  border:1px solid #33362f;background:#000;padding:10px;
+  box-shadow:0 30px 80px -20px rgba(0,0,0,0.6);
+}
+.phone-frame::before,.phone-frame::after{content:'';position:absolute;width:22px;height:22px;border:1px solid #54B953;}
+.phone-frame::before{top:-1px;left:-1px;border-right:none;border-bottom:none;}
+.phone-frame::after{bottom:-1px;right:-1px;border-left:none;border-top:none;}
+.phone-frame video{width:100%;display:block;aspect-ratio:9/16;object-fit:cover;background:#000;}
+.tour-sound-btn{
+  position:absolute;bottom:26px;right:26px;z-index:2;
+  width:42px;height:42px;border-radius:50%;
+  background:rgba(10,11,12,0.65);border:1px solid rgba(255,255,255,0.35);
+  color:#fff;display:flex;align-items:center;justify-content:center;
+  cursor:pointer;font-size:16px;backdrop-filter:blur(3px);
+}
+.tour-sound-btn:hover{border-color:#54B953;color:#54B953;}
+.tour-caption{text-align:center;font-family:'IBM Plex Mono',monospace;font-size:10.5px;letter-spacing:0.08em;text-transform:uppercase;color:#6e716b;margin-top:14px;}
+
+/* ---------- CONTACT / FOOTER ---------- */
+.contact-grid{display:grid;grid-template-columns:1.1fr 1fr;gap:60px;}
+@media(max-width:900px){.contact-grid{grid-template-columns:1fr;}}
+.contact-info div{margin-bottom:26px;}
+.contact-info .label{font-family:var(--font-mono);font-size:11px;color:var(--muted);text-transform:uppercase;letter-spacing:0.1em;margin-bottom:6px;}
+.contact-info .val{font-size:18px;}
+.contact-info a.val:hover{color:var(--accent);}
+form.quote-form{display:flex;flex-direction:column;gap:16px;}
+form.quote-form input,form.quote-form select,form.quote-form textarea{
+  background:var(--bg);border:1px solid var(--line);color:var(--text);
+  padding:14px 16px;font-family:var(--font-display);font-size:14px;width:100%;
+}
+form.quote-form label{font-family:var(--font-mono);font-size:11px;color:var(--muted);text-transform:uppercase;letter-spacing:0.08em;margin-bottom:6px;display:block;}
+form.quote-form textarea{resize:vertical;min-height:100px;}
+
+footer{border-top:1px solid var(--line);padding:40px 8vw;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:16px;}
+footer .foot-brand{display:flex;align-items:center;gap:12px;}
+footer .foot-brand img{height:26px;}
+footer p{font-family:var(--font-mono);font-size:11px;color:var(--muted);}
+footer .foot-links{display:flex;gap:20px;font-size:12px;color:var(--muted);}
+
+/* reveal on scroll */
+.reveal{opacity:0;transform:translateY(24px);transition:opacity 0.7s ease, transform 0.7s ease;}
+.reveal.in{opacity:1;transform:translateY(0);}
+
+/* mode panel visibility */
+.mode-panel{display:none;}
+.mode-panel.active{display:block;}
+
+@media (prefers-reduced-motion: reduce){
+  *{animation:none !important;transition:none !important;}
+}
+</style>
+
+<!-- Google Analytics 4 -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-NCNMMQQWGZ"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-NCNMMQQWGZ');
+</script>
+</head>
+<body class="studio-mode">
+
+<!-- ============ NAV ============ -->
+<header id="siteHeader">
+  <div class="brand">
+    <picture><source srcset="assets/logo.webp" type="image/webp"><img src="assets/logo.png" alt="Studio 18 logo" width="360" height="301" loading="lazy" decoding="async"></picture>
+    <span>STUDIO&nbsp;18</span>
+  </div>
+  <nav>
+    <div class="mode-toggle">
+      <button id="btnStudio" class="active" onclick="setMode('studio')">Studio</button>
+      <button id="btnClub" onclick="setMode('club')">Club</button>
+    </div>
+    <div class="nav-links">
+      <a href="#events">Events</a>
+      <a href="#contact">Contact</a>
+    </div>
+    <div class="nav-phone">629-899-2611</div>
+  </nav>
+</header>
+
+<div class="signal-rail" aria-hidden="true">
+  <i class="on"></i><i class="on"></i><i class="on"></i><i></i><i class="on"></i><i></i><i></i><i class="on"></i><i></i><i></i>
+</div>
+
+<!-- ============ STUDIO MODE ============ -->
+<div class="mode-panel active" id="panel-studio">
+
+  <section class="hero">
+    <div class="hero-bg"><picture><source srcset="assets/control-room-hero.webp" type="image/webp"><img src="assets/control-room-hero.jpg" alt="Studio 18 control room looking into the live room" width="1288" height="952" fetchpriority="high" decoding="async"></picture></div>
+    <div class="hero-content">
+      <div class="hero-tag"><span class="hero-dot"></span> Eagleville, TN &nbsp;·&nbsp; 45–60 min from Nashville</div>
+      <h1>STUDIO 18</h1>
+      <p class="hero-sub">A fully integrated recording, video production, podcast, livestream and content facility — where music, video, and experience come together in one session.</p>
+      <div class="hero-meta">
+        <div><strong>965 sq ft</strong>Live Room</div>
+        <div><strong>32-Channel</strong>SSL Origin Console</div>
+        <div><strong>11'×28'</strong>LED Video Wall</div>
+        <div><strong>Broadcast-Grade</strong>Multi-Cam Video Suite</div>
+      </div>
+      <div class="hero-cta">
+        <a href="#contact" class="btn solid">Request a Custom Quote</a>
+        <a href="#gear" class="btn ghost">See the Gear</a>
+      </div>
+    </div>
+  </section>
+
+  <div class="pillars reveal">
+    <div class="pillar"><div class="num">01</div><h4>True Audio + Video Integration</h4><p>Not separate systems — one unified workflow, start to finish.</p></div>
+    <div class="pillar"><div class="num">02</div><h4>Broadcast-Level Infrastructure</h4><p>Built for real content production, not just recording.</p></div>
+    <div class="pillar"><div class="num">03</div><h4>Plug-and-Play Efficiency</h4><p>Artists and creators walk in and start immediately.</p></div>
+    <div class="pillar"><div class="num">04</div><h4>Experience-Driven Environment</h4><p>Studio + lounge + entertainment mean longer, richer sessions.</p></div>
+    <div class="pillar"><div class="num">05</div><h4>Content-First Design</h4><p>Every space is built for how it sounds and how it looks on camera.</p></div>
+  </div>
+
+  <!-- GEAR -->
+  <section class="section" id="gear">
+    <div class="section-head reveal">
+      <div class="eyebrow">Behind the Glass</div>
+      <h2>The Gear</h2>
+      <p>Every session runs through a world-class signal chain — the same infrastructure whether you're tracking a single or producing a full broadcast.</p>
+    </div>
+
+    <div class="gear-grid reveal">
+      <div class="gear-card">
+        <h3>Control Room</h3>
+        <ul>
+          <li>SSL Origin 32-Channel Console <span class="tag">Inline</span></li>
+          <li>Antelope Galaxy 64 Synergy Core <span class="tag">64-CH I/O</span></li>
+          <li>Rupert Neve Designs 1073OPX <span class="tag">8-CH Preamp</span></li>
+          <li>Empirical Labs Distressor <span class="tag">Pair</span></li>
+          <li>Universal Audio 1176LN <span class="tag">Outboard</span></li>
+          <li>Neumann KH310 + KH750 <span class="tag">Monitoring</span></li>
+          <li>Bittree Patchbays / Mogami Cabling <span class="tag">Routing</span></li>
+        </ul>
+      </div>
+      <div class="gear-card">
+        <h3>Video Production Suite</h3>
+        <ul>
+          <li>Blackmagic ATEM Television Studio 4K8 <span class="tag">Switcher</span></li>
+          <li>Blackmagic DeckLink 8K Pro <span class="tag">Capture</span></li>
+          <li>12G-SDI Infrastructure <span class="tag">4K/8K</span></li>
+          <li>Apple Silicon Edit Systems <span class="tag">Post</span></li>
+          <li>Multi-Camera Live Production <span class="tag">Multicam</span></li>
+          <li>Direct YouTube / Zoom Output <span class="tag">Streaming</span></li>
+          <li>Stream Deck Control <span class="tag">Workflow</span></li>
+        </ul>
+      </div>
+      <div class="gear-card">
+        <h3>Mic Locker & Live Gear</h3>
+        <ul>
+          <li>Neumann U87 <span class="tag">Vocal</span></li>
+          <li>AKG C414 XLII <span class="tag">Matched Pair</span></li>
+          <li>Mojave Audio MA-201 <span class="tag">Pair</span></li>
+          <li>Shure SM57 / SM58 <span class="tag">Dynamic</span></li>
+          <li>Audio-Technica Condensers <span class="tag">Overheads</span></li>
+          <li>Radial & RND Direct Boxes <span class="tag">DI</span></li>
+          <li>10+ Studio Headphones <span class="tag">Cue Mixes</span></li>
+        </ul>
+      </div>
+      <div class="gear-card">
+        <h3>Lighting & Visual Production</h3>
+        <ul>
+          <li>DMX-Controlled Lighting Network <span class="tag">Programmable</span></li>
+          <li>Chauvet / Nanlite / Ikan Systems <span class="tag">Fixtures</span></li>
+          <li>RGB Tube + Stage Wash Lighting <span class="tag">Ambient</span></li>
+          <li>11'×28' LED Wall <span class="tag">1.5mm Pitch</span></li>
+          <li>Software: Pro Tools, Logic Pro <span class="tag">DAW</span></li>
+          <li>FabFilter, Soundtoys, Melodyne, Auto-Tune Pro <span class="tag">Plugins</span></li>
+        </ul>
+      </div>
+    </div>
+    <div class="stat-strip reveal">
+      <div class="stat"><b>4,609</b><span>Sq Ft Total Facility</span></div>
+      <div class="stat"><b>965</b><span>Sq Ft Live Room</span></div>
+      <div class="stat"><b>50+</b><span>Distributed I/O Channels</span></div>
+      <div class="stat"><b>40</b><span>Seat Listening Room</span></div>
+    </div>
+  </section>
+
+  <!-- SERVICES -->
+  <section class="section" id="services" style="background:var(--bg2);">
+    <div class="section-head reveal">
+      <div class="eyebrow">What We Offer</div>
+      <h2>Services</h2>
+      <p>Every booking is a custom quote built around your session — tracking, full production, or the whole building. Tell us the vision; we'll price the day.</p>
+    </div>
+
+    <div class="services-grid reveal">
+      <div class="svc-card featured">
+        <div class="svc-icon">01 / TRACKING</div>
+        <h3>Rehearsal & Content Day</h3>
+        <p>Full access to the 965 sq ft sound-treated live room for rehearsals, pre-production, solo tracking, or content shoots. Basic stage lighting included.</p>
+        <a href="#contact" class="svc-cta" onclick="prefillInterest('Rehearsal & Content Day')">Request a Quote →</a>
+      </div>
+      <div class="svc-card">
+        <div class="svc-icon">02 / TRACKING</div>
+        <h3>Full-Band Recording</h3>
+        <p>Professional engineer and full control room access for album tracking, full-band sessions, and high-quality reference mixes.</p>
+        <a href="#contact" class="svc-cta" onclick="prefillInterest('Full-Band Recording')">Request a Quote →</a>
+      </div>
+      <div class="svc-card">
+        <div class="svc-icon">03 / BROADCAST</div>
+        <h3>Podcast / Livestream / Hybrid</h3>
+        <p>3–4 camera streaming suite with a professional set, direct YouTube/Zoom output, LED graphics, and stage lighting for podcasts, interviews and corporate streams.</p>
+        <a href="#contact" class="svc-cta" onclick="prefillInterest('Podcast / Livestream / Hybrid')">Request a Quote →</a>
+      </div>
+      <div class="svc-card featured">
+        <div class="svc-icon">04 / VIDEO</div>
+        <h3>Music Video & Content Production</h3>
+        <p>Full multi-cam production against the massive LED wall, complete stage lighting control, a video director, and SDI 12G infrastructure.</p>
+        <a href="#contact" class="svc-cta" onclick="prefillInterest('Music Video / Content Production')">Request a Quote →</a>
+      </div>
+      <div class="svc-card">
+        <div class="svc-icon">05 / EVENTS</div>
+        <h3>Album Release / Private Concert</h3>
+        <p>Live Room performance with viewing and pub overflow, massive LED visuals, full lighting, complete AV, and on-site tech support for launches and showcases.</p>
+        <a href="#contact" class="svc-cta" onclick="prefillInterest('Album Release / Private Concert')">Request a Quote →</a>
+      </div>
+      <div class="svc-card">
+        <div class="svc-icon">06 / BUYOUT</div>
+        <h3>Full Facility Buyout</h3>
+        <p>The entire building, exclusively — Live Room, Control, Video Suite, Listening Room, and Pub Lounge, for major productions and brand campaigns.</p>
+        <a href="#events" class="svc-cta">See Studio 18 Events →</a>
+      </div>
+    </div>
+
+    <div class="addon-note reveal">
+      <b>Add-ons available upon request:</b> dedicated audio engineer, mixing, mastering, live streaming/video operator, and post-production editing can all be added to any package — just let us know what your session needs when you request a quote.
+    </div>
+  </section>
+
+  <!-- GALLERY -->
+  <section class="section">
+    <div class="section-head reveal">
+      <div class="eyebrow">The Facility</div>
+      <h2>Take a Look Inside</h2>
+    </div>
+    <div class="gallery reveal">
+      <figure><picture><source srcset="assets/live-room-led-wall.webp" type="image/webp"><img src="assets/live-room-led-wall.jpg" alt="Live room with LED wall and drum kit" width="800" height="533" loading="lazy" decoding="async"></picture><figcaption>Live Room — Stage & LED Wall</figcaption></figure>
+      <figure><picture><source srcset="assets/ssl-console.webp" type="image/webp"><img src="assets/ssl-console.jpg" alt="SSL console with monitoring" width="800" height="533" loading="lazy" decoding="async"></picture><figcaption>Control Room — SSL Origin</figcaption></figure>
+      <figure><picture><source srcset="assets/client-lounge.webp" type="image/webp"><img src="assets/client-lounge.jpg" alt="Lounge seating outside control room" width="799" height="437" loading="lazy" decoding="async"></picture><figcaption>Client Lounge</figcaption></figure>
+      <figure><picture><source srcset="assets/evening-session.webp" type="image/webp"><img src="assets/evening-session.jpg" alt="Console evening session" width="466" height="700" loading="lazy" decoding="async"></picture><figcaption>Evening Session</figcaption></figure>
+      <figure><picture><source srcset="assets/studio-detail.webp" type="image/webp"><img src="assets/studio-detail.jpg" alt="Studio detail" width="556" height="700" loading="lazy" decoding="async"></picture><figcaption>Studio 18 — Detail</figcaption></figure>
+    </div>
+  </section>
+
+</div><!-- /panel-studio -->
+
+
+<!-- ============ CLUB MODE ============ -->
+<div class="mode-panel" id="panel-club">
+
+  <section class="hero">
+    <div class="hero-bg"><picture><source srcset="assets/club-lounge.webp" type="image/webp"><img src="assets/club-lounge.jpg" alt="Studio 18 club lounge with bar and seating" width="1344" height="896" loading="lazy" decoding="async"></picture></div>
+    <div class="hero-content">
+      <div class="club-hero-badge">Private Members Only</div>
+      <h1>THE CLUB</h1>
+      <p class="hero-sub">Golf. Good times. Big screens. Your private escape at Studio 18 — where the game meets the good life.</p>
+      <div class="hero-cta">
+        <a href="#contact" class="btn solid" onclick="prefillInterest('Members Club Invitation')">Request an Invitation</a>
+        <a href="#amenities" class="btn ghost">Explore the Club</a>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" id="amenities">
+    <div class="section-head reveal">
+      <div class="eyebrow">Main Attraction</div>
+      <h2>Trackman Golf Simulator</h2>
+      <p>Tee off on the world's most iconic courses from a climate-controlled bay. Members get exclusive access — including evenings and weekends. A smart scheduling system is on the way, so you book your slot and show up ready to play. No waiting, no crowds.</p>
+    </div>
+
+    <div class="amenity-grid reveal">
+      <div class="amenity">
+        <div class="ic">⛳</div>
+        <h3>World-Class Simulator</h3>
+        <p>Play any course, any time — rain or shine. Access during and after normal business hours for members.</p>
+      </div>
+      <div class="amenity">
+        <div class="ic">🛋</div>
+        <h3>Irish Pub Lounge</h3>
+        <p>Settle into our pub-style room with seven massive flat-screens. Kick back and hang out in style — beverages available.</p>
+      </div>
+      <div class="amenity">
+        <div class="ic">🎉</div>
+        <h3>Private Event Space</h3>
+        <p>Book the pub for your party, corporate event, or watch party — open to members and non-members. <a href="#event-space" style="color:var(--accent);">Details ↓</a></p>
+      </div>
+      <div class="amenity">
+        <div class="ic">🕐</div>
+        <h3>Extended Hours Access</h3>
+        <p>Play outside normal business hours and on weekends — a members-only privilege.</p>
+      </div>
+      <div class="amenity">
+        <div class="ic">🏆</div>
+        <h3>Indoor Golf League</h3>
+        <p>A competitive indoor golf league is launching soon. Stay tuned for details.</p>
+      </div>
+      <div class="amenity">
+        <div class="ic">📺</div>
+        <h3>Seven Large Flatscreens</h3>
+        <p>Watch the game, the match, or whatever the crew is into, on the big screens throughout the lounge.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- CIGAR BAR FEATURE -->
+  <section class="section" id="cigar" style="background:var(--bg2);">
+    <div class="cigar-feature reveal">
+      <div>
+        <div class="coming">Coming This Fall</div>
+        <h3>The Cigar Bar Is Arriving</h3>
+        <p>The Members Club is expanding. A large-format humidor has already arrived on site, and this October we're breaking ground on a climate-controlled pergola built for the club's next chapter — permit approved, parts ordered.</p>
+        <p>Same golf-and-good-times spirit, now with a proper place to slow down with a cigar.</p>
+        <ul class="progress-list">
+          <li><span class="check">✓</span> Humidor on site</li>
+          <li><span class="check">✓</span> Permit approved</li>
+          <li><span class="check">✓</span> Parts ordered</li>
+          <li><span class="check">·</span> Pergola install — October</li>
+        </ul>
+      </div>
+      <div>
+        <picture><source srcset="assets/club-lounge-wide.webp" type="image/webp"><img src="assets/club-lounge-wide.jpg" alt="Studio 18 club lounge" width="900" height="833" loading="lazy" decoding="async" style="width:100%;height:340px;object-fit:cover;"></picture>
+      </div>
+    </div>
+  </section>
+
+  <!-- PRIVATE EVENT SPACE -->
+  <section class="section" id="event-space">
+    <div class="cigar-feature reveal" style="border-color:var(--line);">
+      <div>
+        <div class="coming" style="color:var(--accent);">No Membership Required</div>
+        <h3>Host Your Event at the Club</h3>
+        <p>Birthday parties, corporate meetings, holiday gatherings, watch parties — the pub lounge and golf simulator are available to rent for private events, open to members and non-members alike.</p>
+        <p>Every event is a custom quote built around your headcount and hours. Tell us what you're planning and we'll put a number to it.</p>
+        <ul class="progress-list">
+          <li><span class="check">✓</span> Pub lounge, seven screens, full seating</li>
+          <li><span class="check">✓</span> Trackman golf simulator access available</li>
+          <li><span class="check">✓</span> Members receive preferred event rates</li>
+        </ul>
+        <a href="#contact" class="btn solid" style="margin-top:10px;" onclick="prefillInterest('Private Event — Pub / Club')">Request an Event Quote</a>
+      </div>
+      <div>
+        <picture><source srcset="assets/club-lounge.webp" type="image/webp"><img src="assets/club-lounge.jpg" alt="Studio 18 pub lounge set up for a private event" width="1344" height="896" loading="lazy" decoding="async" style="width:100%;height:340px;object-fit:cover;"></picture>
+      </div>
+    </div>
+  </section>
+
+  <!-- MEMBERSHIP -->
+  <section class="section" style="background:var(--bg2);">
+    <div class="membership-panel reveal">
+      <div class="eyebrow" style="justify-content:center;">Private · Invitation Only</div>
+      <h3>Ready to Join the Club?</h3>
+      <p>Membership is limited and by invitation only. Get in early and lock in your access to the most exciting new spot in Eagleville — golf, the pub, and soon, the cigar bar.</p>
+      <a href="#contact" class="btn solid" onclick="prefillInterest('Members Club Invitation')">Request an Invitation</a>
+    </div>
+  </section>
+
+</div><!-- /panel-club -->
+
+
+<!-- ============ SHARED: VIDEO TOUR ============ -->
+<section class="section tour-section">
+  <div class="tour-grid">
+    <div class="tour-copy reveal">
+      <div class="eyebrow">See It In Motion</div>
+      <h2>Take the Full Tour</h2>
+      <p>A 30-second walkthrough of the whole building — the live room, the control room, the hallway that connects it all, and the club on the other side.</p>
+      <p>One address, two worlds, thirty seconds.</p>
+      <ul class="tour-stops">
+        <li>Club &amp; Pub Lounge</li>
+        <li>Connecting Hallway</li>
+        <li>Live Room &amp; LED Wall</li>
+      </ul>
+    </div>
+    <div class="reveal">
+      <div class="phone-frame">
+        <button class="tour-sound-btn" id="tourSoundBtn" aria-label="Toggle sound" onclick="toggleTourSound()">🔇</button>
+        <video id="tourVideo" src="assets/flyover.mp4" poster="assets/flyover-poster.jpg" muted loop playsinline preload="metadata" onclick="this.paused ? this.play() : this.pause()"></video>
+      </div>
+      <div class="tour-caption">Tap to play · Tap speaker for sound</div>
+    </div>
+  </div>
+</section>
+
+
+<!-- ============ SHARED: EVENTS BRIDGE ============ -->
+<section class="section bridge" id="events">
+  <div class="section-head reveal">
+    <div class="eyebrow">Studio 18 Events</div>
+    <h2>When the Whole Building Becomes One</h2>
+    <p style="color:#a8a89a;">The Studio and the Club run as two distinct worlds — except when you want them together. For full buyouts and Studio 18–hosted events, every space in the building opens up at once.</p>
+  </div>
+  <div class="bridge-grid reveal">
+    <div class="bridge-card">
+      <h4>Full Facility Buyout</h4>
+      <p>Live Room, Control Room, Video Suite, Listening Room, and Pub Lounge — all exclusive, all at once. Built for album launches, brand activations, multi-day shoots, and private showcases up to 80 guests.</p>
+      <a href="#contact" class="btn ghost">Request a Buyout Quote</a>
+    </div>
+    <div class="bridge-card">
+      <h4>Studio 18 Hosted Events</h4>
+      <p>From time to time, Studio 18 hosts its own events — pop-ups that bring the Studio and Club sides together for the community. Reach out to hear about what's coming up.</p>
+      <a href="#contact" class="btn ghost">Get In Touch</a>
+    </div>
+  </div>
+</section>
+
+
+
+
+
+<!-- ============ CONTACT ============ -->
+<section class="section" id="contact">
+  <div class="section-head reveal">
+    <div class="eyebrow">Get In Touch</div>
+    <h2>Request a Custom Quote</h2>
+    <p>Every session at Studio 18 is priced around what you're making. Tell us the shape of your day and we'll follow up with a quote.</p>
+  </div>
+  <div class="contact-grid reveal">
+    <div class="contact-info">
+      <div>
+        <div class="label">Phone</div>
+        <a class="val" href="tel:6298992611">629-899-2611</a>
+      </div>
+      <div>
+        <div class="label">Email</div>
+        <a class="val" href="mailto:studio18.avl@gmail.com">studio18.avl@gmail.com</a>
+      </div>
+      <div>
+        <div class="label">Address</div>
+        <div class="val">15430 Highway 99<br>Eagleville, TN 37060</div>
+      </div>
+      <div>
+        <div class="label">Distance</div>
+        <div class="val">~45–60 minutes from Nashville</div>
+      </div>
+    </div>
+    <form class="quote-form" id="quoteForm" name="quote-request" method="POST" action="/thanks.html" data-netlify="true" data-netlify-honeypot="bot-field">
+      <input type="hidden" name="form-name" value="quote-request">
+      <p style="display:none;"><label>Leave this field blank: <input name="bot-field"></label></p>
+      <div>
+        <label for="q-name">Name</label>
+        <input id="q-name" name="Name" type="text" required>
+      </div>
+      <div>
+        <label for="q-interest">Interested In</label>
+        <select id="q-interest" name="Interested In">
+          <option>Rehearsal & Content Day</option>
+          <option>Full-Band Recording</option>
+          <option>Podcast / Livestream / Hybrid</option>
+          <option>Music Video / Content Production</option>
+          <option>Album Release / Private Concert</option>
+          <option>Full Facility Buyout</option>
+          <option>Members Club Invitation</option>
+          <option>Private Event — Pub / Club</option>
+          <option>Other</option>
+        </select>
+      </div>
+      <div>
+        <label for="q-date">Preferred Date(s)</label>
+        <input id="q-date" name="Preferred Date" type="text" placeholder="e.g. late September">
+      </div>
+      <div>
+        <label for="q-details">Tell us about your session</label>
+        <textarea id="q-details" name="Details" placeholder="Number of people, what you're producing, anything we should know..."></textarea>
+      </div>
+      <button type="submit" class="btn solid" style="align-self:flex-start;">Send Request</button>
+      <div id="formStatus" style="display:none;font-family:var(--font-mono);font-size:13px;margin-top:8px;"></div>
+    </form>
+  </div>
+</section>
+
+<footer>
+  <div class="foot-brand">
+    <picture><source srcset="assets/logo.webp" type="image/webp"><img src="assets/logo.png" alt="Studio 18 logo" width="360" height="301" loading="lazy" decoding="async"></picture>
+    <p>© 2026 Studio 18 &nbsp;·&nbsp; Eagleville, TN &nbsp;·&nbsp; 629-899-2611</p>
+  </div>
+  <div class="foot-links">
+    <a href="#gear">Studio</a>
+    <a href="#amenities">Club</a>
+    <a href="#events">Events</a>
+    <a href="#contact">Contact</a>
+  </div>
+</footer>
+
+<script>
+function prefillInterest(value){
+  const select = document.getElementById('q-interest');
+  if(select){
+    for(const opt of select.options){
+      if(opt.value === value || opt.text === value){ select.value = opt.value; break; }
+    }
+  }
+}
+
+function encodeFormData(data){
+  return Object.keys(data).map(key => encodeURIComponent(key) + '=' + encodeURIComponent(data[key])).join('&');
+}
+
+const quoteForm = document.getElementById('quoteForm');
+if(quoteForm){
+  quoteForm.addEventListener('submit', function(e){
+    e.preventDefault();
+    const formData = new FormData(quoteForm);
+    const payload = {};
+    formData.forEach((value, key) => { payload[key] = value; });
+
+    fetch('/', {
+      method: 'POST',
+      headers: {'Content-Type': 'application/x-www-form-urlencoded'},
+      body: encodeFormData(payload)
+    })
+    .then((res) => {
+      if(!res.ok){ throw new Error('submit failed'); }
+      quoteForm.reset();
+      window.location.href = '/thanks';
+    })
+    .catch(() => {
+      const status = document.getElementById('formStatus');
+      status.style.display = 'block';
+      status.style.color = 'var(--s-red)';
+      status.textContent = "Something went wrong — email us directly at studio18.avl@gmail.com.";
+    });
+  });
+}
+
+function toggleTourSound(){
+  const vid = document.getElementById('tourVideo');
+  const btn = document.getElementById('tourSoundBtn');
+  vid.muted = !vid.muted;
+  btn.textContent = vid.muted ? '🔇' : '🔊';
+  if(vid.paused){ vid.play(); }
+}
+
+// autoplay the tour video (muted) once it scrolls into view
+const tourVideoEl = document.getElementById('tourVideo');
+if(tourVideoEl){
+  const tourIO = new IntersectionObserver((entries)=>{
+    entries.forEach(e=>{
+      if(e.isIntersecting){ tourVideoEl.play().catch(()=>{}); }
+      else { tourVideoEl.pause(); }
+    });
+  }, {threshold:0.4});
+  tourIO.observe(tourVideoEl);
+}
+
+function setMode(mode){
+  const body = document.body;
+  const studioPanel = document.getElementById('panel-studio');
+  const clubPanel = document.getElementById('panel-club');
+  const btnStudio = document.getElementById('btnStudio');
+  const btnClub = document.getElementById('btnClub');
+  const studioLinks = document.querySelectorAll('.studio-only');
+  const clubLinks = document.querySelectorAll('.club-only');
+
+  if(mode === 'club'){
+    body.classList.remove('studio-mode');
+    body.classList.add('club-mode');
+    studioPanel.classList.remove('active');
+    clubPanel.classList.add('active');
+    btnStudio.classList.remove('active');
+    btnClub.classList.add('active');
+    studioLinks.forEach(a=>a.style.display='none');
+    clubLinks.forEach(a=>a.style.display='inline');
+  } else {
+    body.classList.remove('club-mode');
+    body.classList.add('studio-mode');
+    clubPanel.classList.remove('active');
+    studioPanel.classList.add('active');
+    btnClub.classList.remove('active');
+    btnStudio.classList.add('active');
+    clubLinks.forEach(a=>a.style.display='none');
+    studioLinks.forEach(a=>a.style.display='inline');
+  }
+  window.scrollTo({top:0, behavior:'smooth'});
+}
+
+// header scroll state
+const header = document.getElementById('siteHeader');
+window.addEventListener('scroll', ()=>{
+  header.classList.toggle('scrolled', window.scrollY > 40);
+});
+
+// scroll reveal
+const revealEls = document.querySelectorAll('.reveal');
+const io = new IntersectionObserver((entries)=>{
+  entries.forEach(e=>{
+    if(e.isIntersecting){ e.target.classList.add('in'); io.unobserve(e.target); }
+  });
+}, {threshold:0.12});
+revealEls.forEach(el=>io.observe(el));
+
+// signal rail random flicker (studio mode signature detail)
+const rail = document.querySelectorAll('.signal-rail i');
+setInterval(()=>{
+  rail.forEach(i=>{
+    if(Math.random() > 0.7){ i.classList.toggle('on'); }
+  });
+}, 900);
+</script>
+
+</body>
+</html>
