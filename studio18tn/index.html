@@ -52,7 +52,7 @@
   "email": "studio18.avl@gmail.com",
   "address": {
     "@type": "PostalAddress",
-    "streetAddress": "15430 Highway 99",
+    "streetAddress": "15430 TN-99",
     "addressLocality": "Eagleville",
     "addressRegion": "TN",
     "postalCode": "37060",
@@ -288,6 +288,14 @@ body.studio-mode .signal-rail{opacity:1;}
 }
 .addon-note b{color:var(--text);}
 
+/* ---------- LOCAL SEO / FAQ ---------- */
+.local-seo-copy{max-width:70ch;font-size:15.5px;line-height:1.75;color:var(--muted);margin-top:8px;}
+.local-seo-copy strong{color:var(--text);}
+.faq-list{display:flex;flex-direction:column;gap:0;margin-top:36px;border-top:1px solid var(--line);}
+.faq-item{padding:24px 0;border-bottom:1px solid var(--line);}
+.faq-item h3{font-size:16.5px;font-weight:700;margin-bottom:8px;color:var(--text);}
+.faq-item p{font-size:14px;line-height:1.7;color:var(--muted);max-width:68ch;}
+
 /* ---------- GALLERY ---------- */
 .gallery{display:grid;grid-template-columns:1.4fr 1fr 1fr;grid-template-rows:280px 280px;gap:10px;}
 @media(max-width:900px){.gallery{grid-template-columns:1fr 1fr;grid-template-rows:200px 200px 200px;}}
@@ -300,56 +308,6 @@ body.studio-mode .signal-rail{opacity:1;}
   background:linear-gradient(to top, rgba(0,0,0,0.75), transparent);
   font-family:var(--font-mono);font-size:11px;letter-spacing:0.05em;color:#fff;
 }
-
-/* ---------- CALENDAR ---------- */
-.cal-wrap{border:1px solid var(--line);background:var(--panel);}
-.cal-legend{display:flex;gap:22px;padding:18px 26px;border-bottom:1px solid var(--line);flex-wrap:wrap;}
-.cal-legend div{display:flex;align-items:center;gap:8px;font-family:var(--font-mono);font-size:11.5px;color:var(--muted);}
-.dot{width:9px;height:9px;border-radius:2px;}
-.dot.open{background:#4caf50;}
-.dot.booked{background:#e05555;}
-.dot.held{background:#e0c04f;}
-.dot.event{background:#4fc8e0;}
-.embed-slot{
-  min-height:520px;display:flex;align-items:center;justify-content:center;flex-direction:column;gap:14px;
-  padding:40px;text-align:center;color:var(--muted);
-}
-.embed-slot .icon{font-family:var(--font-mono);font-size:32px;color:var(--accent);}
-.embed-slot p{font-size:13px;max-width:44ch;line-height:1.6;}
-.embed-slot code{font-family:var(--font-mono);font-size:11px;background:var(--bg);padding:3px 8px;border:1px solid var(--line);}
-.cal-wrap iframe{width:100%;border:none;display:block;min-height:520px;}
-.notion-embed{border:1px solid var(--line);background:var(--panel);overflow:hidden;}
-.notion-embed-bar{
-  display:flex;align-items:center;gap:10px;padding:12px 20px;
-  border-bottom:1px solid var(--line);
-  font-family:var(--font-mono);font-size:10.5px;letter-spacing:0.1em;text-transform:uppercase;color:var(--muted);
-}
-.notion-embed-bar .live-dot{width:6px;height:6px;border-radius:50%;background:var(--accent);animation:pulse 2s infinite;flex-shrink:0;}
-.notion-crop{overflow:hidden;position:relative;}
-.notion-crop iframe{position:absolute;top:-230px;left:0;width:100%;height:calc(100% + 230px);border:none;}
-.notion-invert iframe{filter:invert(0.92) hue-rotate(180deg);}
-
-/* ---------- NATIVE CALENDAR ---------- */
-.month-grids{display:grid;grid-template-columns:1fr 1fr;gap:1px;background:var(--line);border:1px solid var(--line);}
-@media(max-width:768px){.month-grids{grid-template-columns:1fr;}}
-.month-block{background:var(--bg);padding:24px;}
-.month-title{font-family:var(--font-mono);font-size:13px;letter-spacing:0.1em;text-transform:uppercase;color:var(--accent);margin-bottom:16px;}
-.weekday-row{display:grid;grid-template-columns:repeat(7,1fr);gap:4px;margin-bottom:6px;}
-.weekday-row span{font-family:var(--font-mono);font-size:9.5px;text-align:center;color:var(--muted);text-transform:uppercase;}
-.day-grid{display:grid;grid-template-columns:repeat(7,1fr);gap:4px;}
-.day-cell{
-  aspect-ratio:1;display:flex;align-items:center;justify-content:center;
-  font-family:var(--font-mono);font-size:12px;position:relative;
-  border:1px solid var(--line);color:var(--text);
-}
-.day-cell.empty{border:none;}
-.day-cell.status-open{border-color:#4caf50;color:#4caf50;}
-.day-cell.status-booked{background:var(--line);color:var(--muted);border-color:var(--line);}
-.day-cell.status-held{border-color:#e0c04f;color:#e0c04f;}
-.day-cell.status-event{border-color:#4fc8e0;color:#4fc8e0;background:rgba(79,200,224,0.08);}
-.day-cell.status-past{opacity:0.25;}
-.cal-loading{font-family:var(--font-mono);font-size:12px;color:var(--muted);text-align:center;padding:40px;grid-column:1/-1;}
-.cal-error{font-family:var(--font-mono);font-size:12px;color:var(--muted);text-align:center;padding:20px;}
 
 /* ---------- NEWS ---------- */
 .news-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:24px;}
@@ -481,6 +439,20 @@ footer .foot-links{display:flex;gap:20px;font-size:12px;color:var(--muted);}
 @media (prefers-reduced-motion: reduce){
   *{animation:none !important;transition:none !important;}
 }
+
+/* ---- PROOF / THE WORK ---- */
+.proof-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:2px;}
+.proof-card{background:var(--panel);border:1px solid var(--line);border-radius:var(--radius);padding:30px 26px;display:flex;flex-direction:column;gap:12px;min-height:190px;}
+.proof-card .tag{font-family:var(--font-mono);font-size:10.5px;letter-spacing:0.24em;text-transform:uppercase;color:var(--accent);}
+.proof-card .claim{font-family:var(--display-font);font-size:clamp(21px,2.1vw,28px);font-weight:800;line-height:1.14;letter-spacing:-0.01em;color:var(--text);}
+.proof-card .detail{font-size:13.5px;line-height:1.6;color:var(--muted);margin-top:auto;}
+.proof-note{margin-top:28px;font-family:var(--font-mono);font-size:11.5px;line-height:1.7;letter-spacing:0.05em;color:var(--muted);border-left:2px solid var(--accent-dim);padding-left:16px;max-width:60ch;}
+.quote-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:2px;margin-top:2px;}
+.quote-card{background:var(--panel);border:1px solid var(--line);border-radius:var(--radius);padding:30px 26px;display:flex;flex-direction:column;}
+.quote-card blockquote{font-family:var(--font-serif);font-size:17px;line-height:1.62;color:var(--text);margin:0 0 20px;}
+.quote-card cite{font-family:var(--font-mono);font-size:11px;letter-spacing:0.18em;text-transform:uppercase;color:var(--accent);font-style:normal;display:block;margin-top:auto;}
+.quote-card .role{font-family:var(--font-mono);font-size:10.5px;letter-spacing:0.12em;color:var(--muted);display:block;margin-top:7px;}
+@media(max-width:900px){.proof-grid{grid-template-columns:1fr;}}
 </style>
 
 <!-- Google Analytics 4 -->
@@ -490,6 +462,34 @@ footer .foot-links{display:flex;gap:20px;font-size:12px;color:var(--muted);}
   function gtag(){dataLayer.push(arguments);}
   gtag('js', new Date());
   gtag('config', 'G-NCNMMQQWGZ');
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "Where is Studio 18 located?",
+      "acceptedAnswer": { "@type": "Answer", "text": "15430 TN-99, Eagleville, TN 37060 — about 45–60 minutes from downtown Nashville." }
+    },
+    {
+      "@type": "Question",
+      "name": "What kind of sessions does Studio 18 handle?",
+      "acceptedAnswer": { "@type": "Answer", "text": "Full-band recording, solo tracking, podcasts and livestreams, music videos, album release events, and full-facility buyouts. Every booking is a custom quote." }
+    },
+    {
+      "@type": "Question",
+      "name": "Does Studio 18 have video production, not just audio?",
+      "acceptedAnswer": { "@type": "Answer", "text": "Yes — a broadcast-grade multi-cam video suite with an 11'x28' LED wall, integrated with the same session as the audio recording." }
+    },
+    {
+      "@type": "Question",
+      "name": "Is Studio 18 open to artists outside Nashville?",
+      "acceptedAnswer": { "@type": "Answer", "text": "Yes. Most clients are within driving distance of Nashville, but the studio is built for anyone who wants a professional room without paying Nashville's downtown rates." }
+    }
+  ]
+}
 </script>
 </head>
 <body class="studio-mode">
@@ -507,6 +507,7 @@ footer .foot-links{display:flex;gap:20px;font-size:12px;color:var(--muted);}
     </div>
     <div class="nav-links">
       <a href="#events">Events</a>
+      <a href="/blog/">Blog</a>
       <a href="#contact">Contact</a>
     </div>
     <div class="nav-phone">629-899-2611</div>
@@ -661,6 +662,96 @@ footer .foot-links{display:flex;gap:20px;font-size:12px;color:var(--muted);}
 
     <div class="addon-note reveal">
       <b>Add-ons available upon request:</b> dedicated audio engineer, mixing, mastering, live streaming/video operator, and post-production editing can all be added to any package — just let us know what your session needs when you request a quote.
+    </div>
+  </section>
+
+
+  <!-- ============ PROOF / THE WORK ============
+       HOW TO ADD A CLIENT NAME:
+       copy one .proof-card block below, change the tag / claim / detail.
+       Only add a name once that artist or their management has said yes.
+
+       HOW TO TURN ON TESTIMONIALS:
+       delete the line that says  <!-- TESTIMONIALS OFF  and the matching
+       closing arrow further down, then fill in the three quote cards.
+       Never publish a quote someone did not actually say.
+  -->
+  <section class="section" id="work">
+    <div class="section-head reveal">
+      <div class="eyebrow">The Work</div>
+      <h2>Who's Been In The Room</h2>
+      <p>We don't publish a client's name until they've told us it's alright &mdash; discretion is part of what you're booking. These are the ones we're cleared to talk about.</p>
+    </div>
+
+    <div class="proof-grid reveal">
+      <div class="proof-card">
+        <div class="tag">Client</div>
+        <div class="claim">Unspoken</div>
+        <div class="detail">Sessions tracked at Studio 18.</div>
+      </div>
+      <div class="proof-card">
+        <div class="tag">Credits</div>
+        <div class="claim">#1-charting Christian artists</div>
+        <div class="detail">Acts with number-one radio singles have recorded in this room.</div>
+      </div>
+      <div class="proof-card">
+        <div class="tag">Broadcast</div>
+        <div class="claim">National TV commercials</div>
+        <div class="detail">Commercial campaigns recorded on site.</div>
+      </div>
+    </div>
+
+    <div class="proof-note reveal">
+      More names go up as clients clear them. Worked here and happy to be listed? Tell us &mdash; we'll never post it otherwise.
+    </div>
+
+    <!-- TESTIMONIALS OFF &mdash; remove this line and the closing arrow below to switch on
+    <div class="quote-grid reveal" style="margin-top:34px;">
+      <div class="quote-card">
+        <blockquote>&ldquo;Their exact words go here.&rdquo;</blockquote>
+        <cite>Name</cite>
+        <span class="role">Band / Role</span>
+      </div>
+      <div class="quote-card">
+        <blockquote>&ldquo;Their exact words go here.&rdquo;</blockquote>
+        <cite>Name</cite>
+        <span class="role">Band / Role</span>
+      </div>
+      <div class="quote-card">
+        <blockquote>&ldquo;Their exact words go here.&rdquo;</blockquote>
+        <cite>Name</cite>
+        <span class="role">Band / Role</span>
+      </div>
+    </div>
+    -->
+  </section>
+
+  <!-- LOCAL SEO / FAQ -->
+  <section class="section" id="local-seo" style="background:var(--bg2);">
+    <div class="section-head reveal">
+      <div class="eyebrow">Recording Studio Near Nashville</div>
+      <h2>A Recording Studio Built Different, 45 Minutes From Nashville</h2>
+      <p class="local-seo-copy">Studio 18 is a fully integrated recording studio in Eagleville, TN &mdash; close enough to Nashville's music industry to matter, far enough to give you a room built for real sessions instead of hourly turnover. Artists come for the <strong>SSL Origin console</strong> and the <strong>Neve preamps</strong>. They stay because the building includes a private club, a listening room, and a lounge &mdash; so a session here doesn't end when the mic goes off.</p>
+      <p class="local-seo-copy">Whether you're tracking a full album, shooting a livestream, or need a broadcast-grade video suite for a podcast, Studio 18 runs it all through one unified system, one address, one team.</p>
+    </div>
+
+    <div class="faq-list reveal">
+      <div class="faq-item">
+        <h3>Where is Studio 18 located?</h3>
+        <p>15430 TN-99, Eagleville, TN 37060 &mdash; about 45&ndash;60 minutes from downtown Nashville.</p>
+      </div>
+      <div class="faq-item">
+        <h3>What kind of sessions does Studio 18 handle?</h3>
+        <p>Full-band recording, solo tracking, podcasts and livestreams, music videos, album release events, and full-facility buyouts. Every booking is a custom quote.</p>
+      </div>
+      <div class="faq-item">
+        <h3>Does Studio 18 have video production, not just audio?</h3>
+        <p>Yes &mdash; a broadcast-grade multi-cam video suite with an 11'&times;28' LED wall, integrated with the same session as the audio recording.</p>
+      </div>
+      <div class="faq-item">
+        <h3>Is Studio 18 open to artists outside Nashville?</h3>
+        <p>Yes. Most clients are within driving distance of Nashville, but the studio is built for anyone who wants a professional room without paying Nashville's downtown rates.</p>
+      </div>
     </div>
   </section>
 
@@ -863,19 +954,27 @@ footer .foot-links{display:flex;gap:20px;font-size:12px;color:var(--muted);}
       </div>
       <div>
         <div class="label">Address</div>
-        <div class="val">15430 Highway 99<br>Eagleville, TN 37060</div>
+        <div class="val">15430 TN-99<br>Eagleville, TN 37060</div>
       </div>
       <div>
         <div class="label">Distance</div>
         <div class="val">~45–60 minutes from Nashville</div>
       </div>
     </div>
-    <form class="quote-form" id="quoteForm" name="quote-request" method="POST" action="/thanks.html" data-netlify="true" data-netlify-honeypot="bot-field">
+    <form action='/thanks' class='quote-form' id='quoteForm' method='POST' name='quote-request'>
       <input type="hidden" name="form-name" value="quote-request">
       <p style="display:none;"><label>Leave this field blank: <input name="bot-field"></label></p>
       <div>
         <label for="q-name">Name</label>
         <input id="q-name" name="Name" type="text" required>
+      </div>
+      <div>
+        <label for="q-email">Email</label>
+        <input id="q-email" name="Email" type="email" required>
+      </div>
+      <div>
+        <label for="q-phone">Phone <span style="text-transform:none;letter-spacing:0;">(optional)</span></label>
+        <input id="q-phone" name="Phone" type="tel">
       </div>
       <div>
         <label for="q-interest">Interested In</label>
@@ -914,6 +1013,7 @@ footer .foot-links{display:flex;gap:20px;font-size:12px;color:var(--muted);}
     <a href="#gear">Studio</a>
     <a href="#amenities">Club</a>
     <a href="#events">Events</a>
+    <a href="/blog/">Blog</a>
     <a href="#contact">Contact</a>
   </div>
 </footer>
@@ -926,7 +1026,22 @@ function prefillInterest(value){
       if(opt.value === value || opt.text === value){ select.value = opt.value; break; }
     }
   }
+  if(typeof gtag === 'function'){
+    gtag('event', 'select_service', { service_name: value });
+  }
 }
+
+// track phone / email clicks anywhere on the page
+document.addEventListener('click', function(e){
+  const link = e.target.closest('a');
+  if(!link || typeof gtag !== 'function') return;
+  const href = link.getAttribute('href') || '';
+  if(href.startsWith('tel:')){
+    gtag('event', 'contact_click', { contact_method: 'phone' });
+  } else if(href.startsWith('mailto:')){
+    gtag('event', 'contact_click', { contact_method: 'email' });
+  }
+});
 
 function encodeFormData(data){
   return Object.keys(data).map(key => encodeURIComponent(key) + '=' + encodeURIComponent(data[key])).join('&');
@@ -947,6 +1062,11 @@ if(quoteForm){
     })
     .then((res) => {
       if(!res.ok){ throw new Error('submit failed'); }
+      var chosen = (payload['Interested In'] || 'Not specified');
+      try { sessionStorage.setItem('s18_service', chosen); } catch(err){}
+      if(typeof gtag === 'function'){
+        gtag('event', 'quote_submit', { service_name: chosen });
+      }
       quoteForm.reset();
       window.location.href = '/thanks';
     })
@@ -980,6 +1100,9 @@ if(tourVideoEl){
 }
 
 function setMode(mode){
+  if(typeof gtag === 'function'){
+    gtag('event', 'mode_toggle', { mode: mode });
+  }
   const body = document.body;
   const studioPanel = document.getElementById('panel-studio');
   const clubPanel = document.getElementById('panel-club');
@@ -1032,6 +1155,36 @@ setInterval(()=>{
     if(Math.random() > 0.7){ i.classList.toggle('on'); }
   });
 }, 900);
+</script>
+
+<script>
+/* Engagement tracking — added Sep 2026.
+   quote_start fires once when someone first touches the quote form, so
+   quote_start vs quote_submit in GA4 gives you the abandonment rate.
+   tour_video_play fires once per page view when the flyover is played. */
+(function(){
+  function ev(name, params){
+    if(typeof gtag === 'function'){ try{ gtag('event', name, params || {}); }catch(e){} }
+  }
+  var form = document.getElementById('quoteForm');
+  if(form){
+    var started = false;
+    form.addEventListener('focusin', function(){
+      if(started) return;
+      started = true;
+      ev('quote_start');
+    });
+  }
+  var vid = document.getElementById('tourVideo');
+  if(vid){
+    var played = false;
+    vid.addEventListener('play', function(){
+      if(played) return;
+      played = true;
+      ev('tour_video_play');
+    });
+  }
+})();
 </script>
 
 </body>
