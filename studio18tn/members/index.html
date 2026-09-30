@@ -1,0 +1,320 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="robots" content="noindex, nofollow">
+<title>Members Club Resources | Studio 18</title>
+<meta name="description" content="Studio 18 Members Club: getting started, TrackMan setup, and member documents to view and download.">
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+<link rel="apple-touch-icon" href="/apple-touch-icon.png">
+<link rel="manifest" href="/site.webmanifest">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,500;0,9..144,600;1,9..144,500;1,9..144,600&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-NCNMMQQWGZ"></script>
+<script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','G-NCNMMQQWGZ');</script>
+<style>
+:root{
+  --font-display:'Montserrat',sans-serif;
+  --font-serif:'Fraunces',serif;
+  --font-mono:'IBM Plex Mono',monospace;
+  --bg:#0f1a13;--bg2:#16241a;--panel:#1a2a1e;--line:#3a4a30;
+  --text:#f3ead4;--muted:#b7ab8d;--accent:#c9a227;--accent-dim:#8a6d1c;--ember:#b8672e;
+}
+*{margin:0;padding:0;box-sizing:border-box;}
+html{scroll-behavior:smooth;}
+body{background:var(--bg);color:var(--text);font-family:var(--font-display);overflow-x:hidden;-webkit-font-smoothing:antialiased;}
+a{color:inherit;text-decoration:none;}
+img{display:block;max-width:100%;}
+picture{display:contents}
+
+/* nav */
+header{position:sticky;top:0;z-index:100;display:flex;align-items:center;justify-content:space-between;padding:16px 8vw;background:rgba(15,26,19,0.92);backdrop-filter:blur(6px);border-bottom:1px solid var(--line);}
+.brand{display:flex;align-items:center;gap:12px;}
+.brand img{height:34px;width:auto;}
+.brand span{font-family:var(--font-mono);font-size:12px;letter-spacing:0.18em;color:var(--muted);}
+.nav-links{display:flex;gap:26px;font-size:13px;}
+.nav-links a{color:var(--muted);transition:color .25s;}
+.nav-links a:hover{color:var(--accent);}
+.nav-phone{font-family:var(--font-mono);font-size:13px;margin-left:26px;}
+nav{display:flex;align-items:center;}
+@media(max-width:760px){.nav-links{display:none;}.nav-phone{margin-left:0;}}
+
+.eyebrow{font-family:var(--font-mono);font-size:11px;letter-spacing:0.22em;text-transform:uppercase;color:var(--accent);display:flex;align-items:center;gap:10px;margin-bottom:14px;}
+.eyebrow::before{content:'';width:22px;height:1px;background:var(--accent);display:inline-block;}
+h1,h2,h3{font-family:var(--font-serif);font-weight:600;}
+
+.wrap{max-width:1040px;margin:0 auto;padding:0 24px;}
+
+/* hero */
+.hero{position:relative;overflow:hidden;border-bottom:1px solid var(--line);}
+.hero-bg{position:absolute;inset:0;}
+.hero-bg img{width:100%;height:100%;object-fit:cover;object-position:center 40%;}
+.hero-bg::after{content:'';position:absolute;inset:0;background:linear-gradient(to top,var(--bg) 6%,rgba(15,26,19,0.78) 55%,rgba(15,26,19,0.55) 100%);}
+.hero .wrap{position:relative;padding-top:110px;padding-bottom:70px;}
+.badge{display:inline-flex;align-items:center;gap:10px;padding:9px 16px;border:1px solid var(--accent);font-family:var(--font-mono);font-size:11px;letter-spacing:0.14em;text-transform:uppercase;color:var(--accent);margin-bottom:24px;}
+.hero h1{font-size:clamp(40px,6.4vw,76px);font-style:italic;line-height:1;letter-spacing:-0.01em;}
+.hero p{font-size:clamp(15px,1.8vw,18px);line-height:1.6;max-width:58ch;margin-top:20px;opacity:.88;}
+.hero-cta{display:flex;gap:14px;margin-top:34px;flex-wrap:wrap;}
+
+.btn{display:inline-flex;align-items:center;gap:10px;padding:14px 24px;font-family:var(--font-mono);font-size:12px;letter-spacing:0.12em;text-transform:uppercase;border:1px solid var(--accent);color:var(--accent);background:transparent;cursor:pointer;transition:all .25s ease;white-space:nowrap;}
+.btn:hover{background:var(--accent);color:var(--bg);}
+.btn.solid{background:var(--accent);color:var(--bg);}
+.btn.solid:hover{opacity:.88;}
+.btn.ghost{border-color:var(--line);color:var(--text);}
+.btn.ghost:hover{border-color:var(--accent);color:var(--accent);background:transparent;}
+.btn.sm{padding:10px 14px;font-size:11px;}
+.btn svg{width:14px;height:14px;flex-shrink:0;}
+
+section{padding:80px 0;}
+@media(max-width:760px){section{padding:56px 0;}}
+.section-head{max-width:640px;margin-bottom:40px;}
+.section-head h2{font-size:clamp(28px,3.6vw,40px);line-height:1.1;}
+.section-head p{color:var(--muted);font-size:15.5px;line-height:1.65;margin-top:14px;}
+
+/* steps */
+.steps{list-style:none;display:grid;grid-template-columns:repeat(2,1fr);gap:1px;background:var(--line);border:1px solid var(--line);counter-reset:step;}
+@media(max-width:760px){.steps{grid-template-columns:1fr;}}
+.steps li{background:var(--bg);padding:30px 28px;counter-increment:step;}
+.steps li::before{content:'0' counter(step);display:block;font-family:var(--font-mono);font-size:11px;color:var(--accent);letter-spacing:.1em;margin-bottom:12px;}
+.steps h3{font-size:20px;margin-bottom:10px;}
+.steps p{font-size:14px;color:var(--muted);line-height:1.7;}
+.steps p + p{margin-top:8px;}
+.steps strong{color:var(--text);font-weight:600;}
+.steps a{color:var(--accent);border-bottom:1px solid var(--accent-dim);}
+
+/* documents */
+.doc-group{margin-bottom:44px;}
+.doc-group:last-child{margin-bottom:0;}
+.group-label{display:flex;justify-content:space-between;align-items:baseline;gap:16px;flex-wrap:wrap;font-family:var(--font-mono);font-size:11px;letter-spacing:.16em;text-transform:uppercase;color:var(--muted);padding-bottom:12px;border-bottom:1px solid var(--line);}
+.group-label b{color:var(--accent);font-weight:500;}
+.doc{display:grid;grid-template-columns:auto 1fr auto;gap:22px;align-items:center;padding:24px 0;border-bottom:1px solid var(--line);}
+.doc-icon{width:46px;height:56px;border:1px solid var(--line);background:var(--panel);position:relative;display:flex;align-items:flex-end;justify-content:center;padding-bottom:8px;font-family:var(--font-mono);font-size:9px;letter-spacing:.1em;color:var(--accent);}
+.doc-icon::before{content:'';position:absolute;top:-1px;right:-1px;width:12px;height:12px;background:var(--bg);border-left:1px solid var(--line);border-bottom:1px solid var(--line);}
+.doc h3{font-size:19px;margin-bottom:6px;}
+.doc p{font-size:13.5px;color:var(--muted);line-height:1.6;max-width:56ch;}
+.doc .meta{font-family:var(--font-mono);font-size:10.5px;color:var(--muted);letter-spacing:.08em;margin-top:8px;text-transform:uppercase;}
+.doc .meta .req{color:var(--ember);}
+.doc-actions{display:flex;gap:8px;flex-wrap:wrap;justify-content:flex-end;}
+@media(max-width:760px){
+  .doc{grid-template-columns:auto 1fr;}
+  .doc-actions{grid-column:1/-1;justify-content:flex-start;}
+}
+
+/* package + help panels */
+.package{margin-top:48px;border:1px solid var(--accent);background:var(--panel);padding:36px;display:flex;justify-content:space-between;align-items:center;gap:28px;flex-wrap:wrap;position:relative;overflow:hidden;}
+.package::before{content:'';position:absolute;top:-60%;right:-8%;width:380px;height:380px;background:radial-gradient(circle,rgba(201,162,39,.14),transparent 70%);pointer-events:none;}
+.package h3{font-size:24px;margin-bottom:8px;}
+.package p{color:var(--muted);font-size:14px;line-height:1.6;max-width:52ch;}
+
+.help{display:grid;grid-template-columns:repeat(3,1fr);gap:1px;background:var(--line);border:1px solid var(--line);}
+@media(max-width:760px){.help{grid-template-columns:1fr;}}
+.help > div{background:var(--bg);padding:28px;}
+.help .label{font-family:var(--font-mono);font-size:11px;color:var(--muted);text-transform:uppercase;letter-spacing:.1em;margin-bottom:8px;}
+.help .val{font-size:17px;word-break:break-word;}
+.help a.val:hover{color:var(--accent);}
+.fine{margin-top:26px;font-family:var(--font-mono);font-size:11.5px;line-height:1.7;letter-spacing:.04em;color:var(--muted);border-left:2px solid var(--accent-dim);padding-left:16px;max-width:70ch;}
+
+footer{border-top:1px solid var(--line);padding:36px 8vw;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:16px;}
+footer .foot-brand{display:flex;align-items:center;gap:12px;}
+footer .foot-brand img{height:26px;width:auto;}
+footer p{font-family:var(--font-mono);font-size:11px;color:var(--muted);}
+footer .foot-links{display:flex;gap:20px;font-size:12px;color:var(--muted);flex-wrap:wrap;}
+footer .foot-links a:hover{color:var(--accent);}
+@media (prefers-reduced-motion: reduce){*{transition:none !important;}}
+</style>
+</head>
+<body>
+
+<header>
+  <a class="brand" href="/">
+    <picture><source srcset="/assets/logo.webp" type="image/webp"><img src="/assets/logo.png" alt="Studio 18 logo" width="360" height="301"></picture>
+    <span>STUDIO&nbsp;18</span>
+  </a>
+  <nav>
+    <div class="nav-links">
+      <a href="#start">Getting Started</a>
+      <a href="#documents">Documents</a>
+      <a href="#help">Help</a>
+    </div>
+    <a class="nav-phone" href="tel:+16298992611">629-899-2611</a>
+  </nav>
+</header>
+
+<div class="hero">
+  <div class="hero-bg"><picture><source srcset="/assets/club-lounge-wide.webp" type="image/webp"><img src="/assets/club-lounge-wide.jpg" alt="" aria-hidden="true"></picture></div>
+  <div class="wrap">
+    <div class="badge">Private Members Only</div>
+    <h1>Welcome to the Club.</h1>
+    <p>Everything you need to get set up at Studio 18 lives here &mdash; your membership paperwork, TrackMan simulator setup, and the house rules. Download the package, sign what needs signing, and send it back before your first visit.</p>
+    <div class="hero-cta">
+      <a class="btn solid" href="/members/files/Studio18_Members_Club_Package.zip" download>
+        <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M8 2v9M4 7l4 4 4-4M2 14h12"/></svg>
+        Download full package
+      </a>
+      <a class="btn ghost" href="#start">Getting started</a>
+    </div>
+  </div>
+</div>
+
+<main>
+<section id="start">
+  <div class="wrap">
+    <div class="section-head">
+      <div class="eyebrow">Getting Started</div>
+      <h2>Four steps to your first swing</h2>
+      <p>Your application is already on file. Here&rsquo;s what&rsquo;s left before you&rsquo;re on the simulator.</p>
+    </div>
+    <ol class="steps">
+      <li>
+        <h3>Download the package</h3>
+        <p>Grab the <strong>full package</strong> above, or pick individual documents below. Every document comes as a PDF (to view or print) and a Word file (to fill in on your computer).</p>
+      </li>
+      <li>
+        <h3>Sign &amp; return your agreement</h3>
+        <p>Complete and sign the <strong>Membership Agreement &amp; Waiver</strong>. Email a signed copy (scan or clear photo is fine) to <a href="mailto:robertmc@studio18tn.net?subject=Signed%20Membership%20Agreement">robertmc@studio18tn.net</a>, or hand it to staff on site.</p>
+        <p>We need it back <strong>before your first visit</strong>.</p>
+      </li>
+      <li>
+        <h3>Set up your TrackMan account</h3>
+        <p>Download the <strong>TrackMan Golf</strong> app and create an account using the <strong>same email</strong> you gave us on your application, then text or email us so we can link it to your membership.</p>
+        <p>That account is how you book bay time and track your 15 monthly hours. Read the <strong>TrackMan Member Terms</strong> below.</p>
+      </li>
+      <li>
+        <h3>Get your access &amp; bring your crew</h3>
+        <p>Once your signed agreement is in, staff will issue your <strong>24-hour access</strong> credential. Keep it to yourself &mdash; it&rsquo;s not shareable.</p>
+        <p>Bringing guests? Each guest signs the <strong>Guest Waiver</strong> on their first visit. Print one ahead of time or sign one on site.</p>
+      </li>
+    </ol>
+  </div>
+</section>
+
+<section id="documents" style="padding-top:0;">
+  <div class="wrap">
+    <div class="section-head">
+      <div class="eyebrow">Member Documents</div>
+      <h2>Your membership library</h2>
+      <p>View any document in your browser or download it to keep. These are read-only copies &mdash; download a file to fill it in.</p>
+    </div>
+
+    <div class="doc-group">
+      <div class="group-label"><span><b>Sign &amp; return</b></span><span>Required before first visit</span></div>
+
+      <div class="doc">
+        <div class="doc-icon">PDF</div>
+        <div>
+          <h3>Membership Agreement &amp; Waiver</h3>
+          <p>Your membership terms, billing, cancellation, and the release of liability. Sign and return to activate access.</p>
+          <div class="meta"><span class="req">Signature required</span> &nbsp;·&nbsp; 3 pages</div>
+        </div>
+        <div class="doc-actions">
+          <a class="btn sm" href="/members/files/Studio18_Membership_Agreement_and_Waiver.pdf" target="_blank" rel="noopener">View PDF</a>
+          <a class="btn sm ghost" href="/members/files/Studio18_Membership_Agreement_and_Waiver.docx" download>Word</a>
+        </div>
+      </div>
+
+      <div class="doc">
+        <div class="doc-icon">PDF</div>
+        <div>
+          <h3>Guest Waiver</h3>
+          <p>Every guest signs once before using equipment or entering the simulator bay. Room for three guests per sheet.</p>
+          <div class="meta"><span class="req">Each guest signs</span> &nbsp;·&nbsp; 1 page</div>
+        </div>
+        <div class="doc-actions">
+          <a class="btn sm" href="/members/files/Studio18_Guest_Waiver.pdf" target="_blank" rel="noopener">View PDF</a>
+          <a class="btn sm ghost" href="/members/files/Studio18_Guest_Waiver.docx" download>Word</a>
+        </div>
+      </div>
+    </div>
+
+    <div class="doc-group">
+      <div class="group-label"><span><b>Keep for reference</b></span><span>No signature needed</span></div>
+
+      <div class="doc">
+        <div class="doc-icon">PDF</div>
+        <div>
+          <h3>House Rules</h3>
+          <p>Hours and access, guests, simulator etiquette, cigars and smoking, minors, event space, and facility care.</p>
+          <div class="meta">Reference &nbsp;·&nbsp; 2 pages</div>
+        </div>
+        <div class="doc-actions">
+          <a class="btn sm" href="/members/files/Studio18_House_Rules.pdf" target="_blank" rel="noopener">View PDF</a>
+          <a class="btn sm ghost" href="/members/files/Studio18_House_Rules.docx" download>Word</a>
+        </div>
+      </div>
+
+      <div class="doc">
+        <div class="doc-icon">PDF</div>
+        <div>
+          <h3>TrackMan Member Terms</h3>
+          <p>Your TrackMan account, booking and monthly hours, extra time at the $40/hr member rate, and equipment use.</p>
+          <div class="meta">Reference &nbsp;·&nbsp; 2 pages</div>
+        </div>
+        <div class="doc-actions">
+          <a class="btn sm" href="/members/files/Studio18_TrackMan_Terms.pdf" target="_blank" rel="noopener">View PDF</a>
+          <a class="btn sm ghost" href="/members/files/Studio18_TrackMan_Terms.docx" download>Word</a>
+        </div>
+      </div>
+
+      <div class="doc">
+        <div class="doc-icon">PDF</div>
+        <div>
+          <h3>Membership Overview</h3>
+          <p>A one-page summary of what your membership includes, from simulator hours to the Irish Pub lounge and what&rsquo;s coming next.</p>
+          <div class="meta">Reference &nbsp;·&nbsp; 1 page</div>
+        </div>
+        <div class="doc-actions">
+          <a class="btn sm" href="/members/files/Studio18_Membership_Overview.pdf" target="_blank" rel="noopener">View PDF</a>
+          <a class="btn sm ghost" href="/members/files/Studio18_Membership_Overview.docx" download>Word</a>
+        </div>
+      </div>
+    </div>
+
+    <div class="package">
+      <div>
+        <h3>Everything in one download</h3>
+        <p>All five documents in PDF and Word, bundled in a single .zip file.</p>
+      </div>
+      <a class="btn solid" href="/members/files/Studio18_Members_Club_Package.zip" download>
+        <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M8 2v9M4 7l4 4 4-4M2 14h12"/></svg>
+        Download package (.zip)
+      </a>
+    </div>
+  </div>
+</section>
+
+<section id="help" style="padding-top:0;">
+  <div class="wrap">
+    <div class="section-head">
+      <div class="eyebrow">Questions?</div>
+      <h2>We&rsquo;re a text away</h2>
+    </div>
+    <div class="help">
+      <div><div class="label">Call or text</div><a class="val" href="tel:+16298992611">629-899-2611</a></div>
+      <div><div class="label">Return documents</div><a class="val" href="mailto:robertmc@studio18tn.net">robertmc@studio18tn.net</a></div>
+      <div><div class="label">Find us</div><span class="val">15430 Highway 99<br>Eagleville, TN 37060</span></div>
+    </div>
+    <p class="fine">This page is for Studio 18 members. Please don&rsquo;t share the link publicly. If a document here ever differs from the copy you signed, your signed agreement controls.</p>
+  </div>
+</section>
+</main>
+
+<footer>
+  <div class="foot-brand">
+    <picture><source srcset="/assets/logo.webp" type="image/webp"><img src="/assets/logo.png" alt="Studio 18 logo" width="360" height="301" loading="lazy" decoding="async"></picture>
+    <p>© 2026 Studio 18 &nbsp;·&nbsp; Eagleville, TN &nbsp;·&nbsp; 629-899-2611</p>
+  </div>
+  <div class="foot-links">
+    <a href="/#gear">Studio</a>
+    <a href="/#amenities">Club</a>
+    <a href="/#events">Events</a>
+    <a href="/blog/">Blog</a>
+    <a href="/#contact">Contact</a>
+  </div>
+</footer>
+
+</body>
+</html>

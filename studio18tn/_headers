@@ -20,3 +20,11 @@
   Cache-Control: public, max-age=0, must-revalidate
 /thanks.html
   Cache-Control: public, max-age=0, must-revalidate
+
+/members
+  X-Robots-Tag: noindex, nofollow
+/members/*
+  X-Robots-Tag: noindex, nofollow
+/members/files/*
+  X-Robots-Tag: noindex, nofollow
+  Cache-Control: public, max-age=0, must-revalidate
